@@ -6,7 +6,7 @@ import users from "./users.js";
 // повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
 const getSortedUniqueSkills = users =>
-  users
+  [...users]
     .reduce((allSkills, user) => {
       allSkills.push(...user.skills);
       return allSkills;
